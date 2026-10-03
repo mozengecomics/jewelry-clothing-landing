@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lockedin Exclusives | Fine Jewelry & Modern Fashion</title>
+    <meta
+      name="description"
+      content="Luxury jewelry and modern clothing for everyday elegance. Discover handcrafted accessories and elevated essentials."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f7f1ee;
+        --panel: #fffaf8;
+        --ivory: #fdf8f5;
+        --accent: #b98b73;
+        --accent-dark: #8d624d;
+        --text: #1f1a18;
+        --muted: #6d5b57;
+        --line: rgba(31, 26, 24, 0.12);
+        --shadow: 0 24px 60px rgba(30, 20, 17, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      .container {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .section {
+        padding: 96px 0;
+      }
+
+      .eyebrow {
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--accent-dark);
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      h1, h2, h3, h4 {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+        line-height: 0.95;
+        letter-spacing: -0.02em;
+      }
+
+      p {
+        color: var(--muted);
+        font-size: 1rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 52px;
+        padding: 0 26px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 600;
+        transition: 0.25s ease;
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        background: var(--text);
+        color: white;
+        box-shadow: 0 10px 30px rgba(31, 26, 24, 0.2);
+      }
+
+      .btn-primary:hover {
+        background: var(--accent-dark);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--text);
+        border-color: var(--line);
+      }
+
+      .btn-secondary:hover {
+        background: rgba(185, 139, 115, 0.08);
+      }
+
+      .topbar {
+        background: rgba(255, 250, 248, 0.82);
+        backdrop-filter: blur(16px);
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 84px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 700;
+        font-size: 1.1rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #e9c5a7, #a96d5d);
+        position: relative;
+        display: grid;
+        place-items: center;
+      }
+
+      .brand-mark::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 2px solid rgba(255,255,255,0.75);
+        display: block;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
+
+      .nav-links a {
+        font-size: 0.9rem;
+        color: var(--muted);
+        transition: color 0.2s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--text);
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .menu-toggle {
+        display: none;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        border: 1px solid var(--line);
+        background: transparent;
+        cursor: pointer;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: 64px 0 48px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+        gap: 48px;
+      }
+
+      .hero-copy h1 {
+        font-size: clamp(3.6rem, 6vw, 7rem);
+        margin: 18px 0 20px;
+        max-width: 560px;
+      }
+
+      .hero-copy p {
+        max-width: 560px;
+        font-size: 1.08rem;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px;
+        margin-top: 32px;
+      }
+
+      .hero-meta {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-top: 32px;
+        flex-wrap: wrap;
+      }
+
+      .meta-box {
+        min-width: 110px;
+      }
+
+      .meta-box strong {
+        display: block;
+        font-size: 1.7rem;
+        font-family: "Cormorant Garamond", serif;
+        color: var(--text);
+      }
+
+      .meta-box span {
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      .hero-visual {
+        position: relative;
+      }
+
+      .image-stack {
+        position: relative;
+        display: grid;
+        place-items: center;
+        min-height: 700px;
+      }
+
+      .card-image {
+        position: absolute;
+        border-radius: 32px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        background: #ddd;
+      }
+
+      .main-image {
+        width: min(100%, 520px);
+        height: 680px;
+        right: 30px;
+        top: 0;
+        z-index: 2;
+      }
+
+      .accent-image {
+        width: 280px;
+        height: 310px;
+        left: 0;
+        bottom: 26px;
+        z-index: 3;
+      }
+
+      .floating-badge {
+        position: absolute;
+        right: 0;
+        top: 120px;
+        z-index: 4;
+        background: white;
+        padding: 18px 20px;
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+      }
+
+      .floating-badge .small {
+        color: var(--muted);
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+
+      .floating-badge strong {
+        display: block;
+        font-size: 2.2rem;
+        font-family: "Cormorant Garamond", serif;
+        margin-top: 6px;
+      }
+
+      .featured-strip {
+        margin-top: 36px;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background: rgba(255,255,255,0.25);
+      }
+
+      .strip-inner {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 24px;
+        padding: 24px 0;
+      }
+
+      .strip-item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .strip-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: rgba(185, 139, 115, 0.12);
+        color: var(--accent-dark);
+        font-size: 1.2rem;
+      }
+
+      .categories-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px;
+        margin-top: 48px;
+      }
+
+      .category-card {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        overflow: hidden;
+        box-shadow: 0 14px 32px rgba(30,20,17,0.03);
+      }
+
+      .category-card img {
+        height: 370px;
+        object-fit: cover;
+      }
+
+      .category-card .card-body {
+        padding: 26px 24px 28px;
+      }
+
+      .category-card h3 {
+        font-size: clamp(2.1rem, 2vw, 3rem);
+        margin: 10px 0 8px;
+      }
+
+      .category-card a {
+        display: inline-block;
+        margin-top: 16px;
+        font-weight: 600;
+        color: var(--text);
+      }
+
+      .section-header {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 40px;
+      }
+
+      .section-header h2 {
+        font-size: clamp(3rem, 4vw, 5rem);
+      }
+
+      .section-header p {
+        max-width: 520px;
+      }
+
+      .collection-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .product-card {
+        background: rgba(255,255,255,0.8);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        overflow: hidden;
+      }
+
+      .product-image {
+        position: relative;
+        height: 360px;
+        overflow: hidden;
+      }
+
+      .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .tag {
+        position: absolute;
+        left: 16px;
+        top: 16px;
+        background: rgba(255,255,255,0.8);
+        color: var(--text);
+        border-radius: 999px;
+        padding: 8px 12px;
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .product-body {
+        padding: 20px 18px 24px;
+      }
+
+      .product-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        gap: 12px;
+      }
+
+      .product-body h3 {
+        font-size: 2.1rem;
+      }
+
+      .product-price {
+        font-weight: 700;
+        color: var(--text);
+        white-space: nowrap;
+      }
+
+      .product-body p {
+        margin-top: 10px;
+        font-size: 0.92rem;
+      }
+
+      .product-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 18px;
+      }
+
+      .stars {
+        color: #d19a5c;
+        letter-spacing: 0.12em;
+      }
+
+      .cart-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid var(--line);
+        background: var(--panel);
+        display: grid;
+        place-items: center;
+        font-size: 1.2rem;
+      }
+
+      .story {
+        background: linear-gradient(180deg, rgba(255,255,255,0.52), rgba(255,255,255,0.2));
+      }
+
+      .story-grid {
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 36px;
+        align-items: center;
+      }
+
+      .story-visual {
+        position: relative;
+        min-height: 620px;
+      }
+
+      .story-image-main {
+        position: absolute;
+        inset: 0 40px 0 0;
+        border-radius: 32px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .story-image-extra {
+        position: absolute;
+        right: 0;
+        bottom: 26px;
+        width: 220px;
+        height: 260px;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        border: 10px solid rgba(255,255,255,0.7);
+      }
+
+      .story-copy h2 {
+        font-size: clamp(3rem, 4vw, 5rem);
+        margin: 18px 0 20px;
+      }
+
+      .story-list {
+        margin-top: 26px;
+        display: grid;
+        gap: 18px;
+      }
+
+      .story-item {
+        display: flex;
+        gap: 14px;
+        align-items: start;
+      }
+
+      .story-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: rgba(185,139,115,0.12);
+        color: var(--accent-dark);
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+      }
+
+      .story-item h4 {
+        font-size: 2rem;
+        margin-bottom: 4px;
+      }
+
+      .testimonial-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+        margin-top: 48px;
+      }
+
+      .testimonial {
+        background: rgba(255,255,255,0.7);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 28px 22px;
+      }
+
+      .quote-mark {
+        font-size: 3rem;
+        font-family: "Cormorant Garamond", serif;
+        color: var(--accent-dark);
+        line-height: 1;
+      }
+
+      .testimonial p {
+        margin-top: 10px;
+      }
+
+      .person {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .person img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .person strong {
+        display: block;
+      }
+
+      .cta {
+        background: linear-gradient(135deg, #f4e8df, #f9f3ee 50%, #f1e5e3);
+      }
+
+      .cta-box {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 24px;
+        align-items: center;
+        background: rgba(255,255,255,0.64);
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        padding: 40px 34px;
+      }
+
+      .cta-box h2 {
+        font-size: clamp(2.8rem, 4vw, 4.5rem);
+        margin: 14px 0 10px;
+      }
+
+      .newsletter {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        justify-content: flex-end;
+      }
+
+      .newsletter input {
+        flex: 1;
+        min-height: 58px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: white;
+        padding: 0 18px;
+        font-size: 1rem;
+      }
+
+      .footer {
+        padding: 34px 0 48px;
+        border-top: 1px solid var(--line);
+        background: rgba(255,255,255,0.26);
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .small-links {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 980px) {
+        .hero-grid,
+        .story-grid,
+        .cta-box,
+        .categories-grid,
+        .testimonial-wrap,
+        .collection-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .image-stack {
+          min-height: 560px;
+        }
+
+        .main-image {
+          right: 10px;
+          width: min(100%, 430px);
+          height: 520px;
+        }
+
+        .accent-image {
+          width: 220px;
+          height: 260px;
+        }
+
+        .nav-links {
+          position: absolute;
+          top: 84px;
+          left: 16px;
+          right: 16px;
+          background: rgba(255, 250, 248, 0.96);
+          border: 1px solid var(--line);
+          border-radius: 18px;
+          padding: 18px 20px;
+          display: none;
+          flex-direction: column;
+          align-items: flex-start;
+          box-shadow: var(--shadow);
+        }
+
+        .nav-links.open {
+          display: flex;
+        }
+
+        .menu-toggle {
+          display: inline-grid;
+          place-items: center;
+        }
+
+        .collection-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 640px) {
+        .section {
+          padding: 80px 0;
+        }
+
+        .hero-copy h1 {
+          font-size: 3.4rem;
+        }
+
+        .strip-inner,
+        .categories-grid,
+        .collection-grid,
+        .testimonial-wrap,
+        .cta-box {
+          grid-template-columns: 1fr;
+        }
+
+        .section-header {
+          display: block;
+        }
+
+        .section-header h2 {
+          margin-bottom: 12px;
+        }
+
+        .hero-meta {
+          gap: 22px;
+        }
+
+        .newsletter {
+          flex-direction: column;
+          align-items: stretch;
+          justify-content: flex-start;
+        }
+
+        .nav-actions .btn {
+          display: none;
+        }
+
+        .brand {
+          font-size: 0.95rem;
+          letter-spacing: 0.06em;
+        }
+
+        .story-visual {
+          min-height: 430px;
+        }
+
+        .story-image-main {
+          inset: 0 0 0 0;
+        }
+
+        .story-image-extra {
+          width: 160px;
+          height: 190px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container navbar">
+        <a href="#" class="brand" aria-label="Lockedin Exclusives home">
+          <span class="brand-mark"></span>
+          <span>Lockedin Exclusives</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#new">New In</a>
+          <a href="#collections">Collections</a>
+          <a href="#bestsellers">Bestsellers</a>
+          <a href="#story">Our Story</a>
+          <a href="#reviews">Reviews</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="#newsletter" class="btn btn-secondary">Join</a>
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Crafted for everyday luxury</span>
+            <h1>Jewelry & style for your boldest days.</h1>
+            <p>
+              Discover modern heirlooms, soft tailoring, and statement essentials
+              designed to move effortlessly from day to night.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#collections" class="btn btn-primary">Shop Collection</a>
+              <a href="#story" class="btn btn-secondary">Our Craft</a>
+            </div>
+
+            <div class="hero-meta">
+              <div class="meta-box">
+                <strong>2.4k+</strong>
+                <span>happy clients</span>
+              </div>
+              <div class="meta-box">
+                <strong>120+</strong>
+                <span>signature pieces</span>
+              </div>
+              <div class="meta-box">
+                <strong>4.9/5</strong>
+                <span>top-rated style</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="image-stack">
+              <div class="card-image main-image">
+                <img
+                  src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80"
+                  alt="Woman wearing jewelry and fashion styling"
+                />
+              </div>
+
+              <div class="card-image accent-image">
+                <img
+                  src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"
+                  alt="Fashion portrait"
+                />
+              </div>
+
+              <div class="floating-badge">
+                <span class="small">New drop</span>
+                <strong>Spring '25</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="featured-strip">
+          <div class="container strip-inner">
+            <div class="strip-item">
+              <div class="strip-icon">✦</div>
+              <span>Handcrafted in small batches</span>
+            </div>
+            <div class="strip-item">
+              <div class="strip-icon">✓</div>
+              <span>Premium, responsibly sourced materials</span>
+            </div>
+            <div class="strip-item">
+              <div class="strip-icon">⏱</div>
+              <span>Fast worldwide delivery</span>
+            </div>
+            <div class="strip-item">
+              <div class="strip-icon">♡</div>
+              <span>Styling support included</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="collections">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow">Shop by mood</span>
+              <h2>Curated for everyday elegance.</h2>
+            </div>
+            <p>
+              Thoughtful pieces that balance polish and personality — from layered
+              jewellery to refined silhouettes and wardrobe staples.
+            </p>
+          </div>
+
+          <div class="categories-grid">
+            <article class="category-card">
+              <img
+                src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80"
+                alt="Jewelry collection"
+              />
+              <div class="card-body">
+                <span class="eyebrow">Jewelry</span>
+                <h3>Golden layers</h3>
+                <p>Statement rings, delicate chains, and texture-rich gold finishes.</p>
+                <a href="#bestsellers">Explore →</a>
+              </div>
+            </article>
+
+            <article class="category-card">
+              <img
+                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80"
+                alt="Clothing collection"
+              />
+              <div class="card-body">
+                <span class="eyebrow">Apparel</span>
+                <h3>Soft structure</h3>
+                <p>Fluid silhouettes and elevated essentials built for real life.</p>
+                <a href="#bestsellers">Explore →</a>
+              </div>
+            </article>
+
+            <article class="category-card">
+              <img
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+                alt="Accessories and gifting"
+              />
+              <div class="card-body">
+                <span class="eyebrow">Gifting</span>
+                <h3>Gift-worthy</h3>
+                <p>Beautiful gift sets designed for meaningful moments and personal rituals.</p>
+                <a href="#newsletter">Explore →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="bestsellers">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow">Best sellers</span>
+              <h2>Signature pieces clients keep coming back for.</h2>
+            </div>
+            <a href="#newsletter" class="btn btn-secondary">View all</a>
+          </div>
+
+          <div class="collection-grid">
+            <article class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80"
+                  alt="Gold jewelry set"
+                />
+                <span class="tag">New</span>
+              </div>
+              <div class="product-body">
+                <div class="product-top">
+                  <h3>Solstice Set</h3>
+                  <div class="product-price">$148</div>
+                </div>
+                <p>Stackable gold necklace and ring pairing</p>
+                <div class="product-footer">
+                  <span class="stars">★★★★★</span>
+                  <button class="cart-btn" aria-label="Add to cart">+</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80"
+                  alt="Elegant outfit"
+                />
+                <span class="tag">Popular</span>
+              </div>
+              <div class="product-body">
+                <div class="product-top">
+                  <h3>Ember Dress</h3>
+                  <div class="product-price">$196</div>
+                </div>
+                <p>Soft knit silhouette with refined structure</p>
+                <div class="product-footer">
+                  <span class="stars">★★★★★</span>
+                  <button class="cart-btn" aria-label="Add to cart">+</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80"
+                  alt="Style with layered gold"
+                />
+                <span class="tag">Limited</span>
+              </div>
+              <div class="product-body">
+                <div class="product-top">
+                  <h3>Velvet Link</h3>
+                  <div class="product-price">$92</div>
+                </div>
+                <p>Layered chain bracelet with polished finish</p>
+                <div class="product-footer">
+                  <span class="stars">★★★★★</span>
+                  <button class="cart-btn" aria-label="Add to cart">+</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image">
+                <img
+                  src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+                  alt="Luxury fabric fashion"
+                />
+                <span class="tag">Editor’s pick</span>
+              </div>
+              <div class="product-body">
+                <div class="product-top">
+                  <h3>Luna Blazer</h3>
+                  <div class="product-price">$228</div>
+                </div>
+                <p>Tailored blazer with fluid movement and elegance</p>
+                <div class="product-footer">
+                  <span class="stars">★★★★★</span>
+                  <button class="cart-btn" aria-label="Add to cart">+</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section story" id="story">
+        <div class="container story-grid">
+          <div class="story-visual">
+            <div class="story-image-main">
+              <img
+                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80"
+                alt="Brand portrait"
+              />
+            </div>
+            <div class="story-image-extra">
+              <img
+                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"
+                alt="Close-up fashion"
+              />
+            </div>
+          </div>
+
+          <div class="story-copy">
+            <span class="eyebrow">Our story</span>
+            <h2>Made to feel personal, elegant, and effortless.</h2>
+            <p>
+              Lockedin Exclusives was born from the idea that clothing and jewelry should
+              feel like a reflection of your confidence — not just your outfit.
+            </p>
+
+            <div class="story-list">
+              <div class="story-item">
+                <div class="story-icon">✦</div>
+                <div>
+                  <h4>Thoughtful design</h4>
+                  <p>Each collection is created to blend softness, structure, and subtle luxury.</p>
+                </div>
+              </div>
+
+              <div class="story-item">
+                <div class="story-icon">♡</div>
+                <div>
+                  <h4>Real-life styling</h4>
+                  <p>Our pieces are built to move beautifully from brunch to evening plans.</p>
+                </div>
+              </div>
+
+              <div class="story-item">
+                <div class="story-icon">✓</div>
+                <div>
+                  <h4>Craft with care</h4>
+                  <p>We produce in small runs to keep quality high and every piece intentional.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="reviews">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow">Client love</span>
+              <h2>Style and quality people notice.</h2>
+            </div>
+          </div>
+
+          <div class="testimonial-wrap">
+            <article class="testimonial">
+              <div class="quote-mark">“</div>
+              <p>
+                The quality is stunning and the jewelry looks even better in person.
+                It feels luxurious without trying too hard.
+              </p>
+              <div class="person">
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80"
+                  alt="Reviewer portrait"
+                />
+                <div>
+                  <strong>Emma R.</strong>
+                  <span>New York</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial">
+              <div class="quote-mark">“</div>
+              <p>
+                I wore the blazer and necklace to a dinner event and received
+                compliments all night. The styling is so elegant.
+              </p>
+              <div class="person">
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
+                  alt="Reviewer portrait"
+                />
+                <div>
+                  <strong>Daniel T.</strong>
+                  <span>Chicago</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial">
+              <div class="quote-mark">“</div>
+              <p>
+                Every detail feels elevated. It’s rare to find pieces that look
+                refined yet still feel effortless and wearable.
+              </p>
+              <div class="person">
+                <img
+                  src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=300&q=80"
+                  alt="Reviewer portrait"
+                />
+                <div>
+                  <strong>Sophia L.</strong>
+                  <span>Los Angeles</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta" id="newsletter">
+        <div class="container">
+          <div class="cta-box">
+            <div>
+              <span class="eyebrow">Stay in the loop</span>
+              <h2>Get first access to drops, styling notes, and exclusive offers.</h2>
+            </div>
+
+            <form class="newsletter">
+              <input type="email" placeholder="Enter your email" aria-label="Email address" />
+              <button type="submit" class="btn btn-primary">Join now</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="brand">
+          <span class="brand-mark"></span>
+          <span>Lockedin Exclusives</span>
+        </div>
+
+        <div class="small-links">
+          <a href="#collections">Collections</a>
+          <a href="#story">Our Story</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#newsletter">Newsletter</a>
+        </div>
+
+        <p>© 2025 Lockedin Exclusives</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+      });
+
+      document.querySelector(".newsletter").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const button = this.querySelector("button");
+        const input = this.querySelector("input");
+
+        button.textContent = "Joined";
+        button.disabled = true;
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>
