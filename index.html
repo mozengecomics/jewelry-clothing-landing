@@ -3,30 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lockedin Exclusives | Luxury Streetwear & Fine Jewelry</title>
+    <title>Lockedin Exclusives | Luxury Jewelry & Streetwear</title>
     <meta
       name="description"
-      content="Lockedin Exclusives blends luxury jewelry and statement streetwear for Gen Z and millennial fashion lovers."
+      content="Lockedin Exclusives is a luxury jewelry and fashion brand blending elevated essentials and statement pieces for Gen Z and millennials."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
       :root {
         --bg: #070707;
-        --bg-soft: #111111;
+        --bg-soft: #101010;
         --panel: #141414;
-        --panel-2: #1a1919;
-        --ivory: #f5e9d4;
-        --gold: #c9a15b;
-        --gold-soft: #8f6d39;
-        --text: #f8f4ee;
-        --muted: #c0b5a4;
-        --line: rgba(201, 161, 91, 0.18);
-        --shadow: 0 22px 60px rgba(0, 0, 0, 0.6);
+        --panel-2: #1a1817;
+        --gold: #d0a76b;
+        --gold-strong: #f0c98b;
+        --gold-soft: #8a6a40;
+        --text: #f7f1ea;
+        --muted: #c8bba8;
+        --line: rgba(208, 167, 107, 0.18);
+        --shadow: 0 28px 70px rgba(0, 0, 0, 0.6);
       }
 
       * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,27 +31,28 @@
       body {
         font-family: "Inter", sans-serif;
         background:
-          radial-gradient(circle at top, rgba(201, 161, 91, 0.10), transparent 35%),
-          linear-gradient(180deg, #070707 0%, #0d0d0d 100%);
+          radial-gradient(circle at top, rgba(208, 167, 107, 0.08), transparent 24%),
+          linear-gradient(180deg, #070707 0%, #0c0b0b 100%);
         color: var(--text);
         line-height: 1.6;
       }
       img { max-width: 100%; display: block; }
-      a { text-decoration: none; color: inherit; }
+      a { color: inherit; text-decoration: none; }
       ul { list-style: none; }
+      button, input { font: inherit; }
       .container { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
       .section { padding: 96px 0; }
       .eyebrow {
+        color: var(--gold);
         letter-spacing: 0.18em;
         text-transform: uppercase;
-        color: var(--gold);
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 700;
       }
       h1, h2, h3, h4 {
         font-family: "Cormorant Garamond", serif;
         font-weight: 600;
-        line-height: 0.95;
+        line-height: 0.96;
         letter-spacing: -0.02em;
       }
       p { color: var(--muted); font-size: 1rem; }
@@ -63,97 +61,107 @@
         align-items: center;
         justify-content: center;
         gap: 10px;
-        min-height: 52px;
-        padding: 0 26px;
+        min-height: 54px;
+        padding: 0 28px;
         border-radius: 999px;
         border: 1px solid transparent;
         font-weight: 700;
         transition: 0.25s ease;
         cursor: pointer;
-        letter-spacing: 0.02em;
       }
       .btn-primary {
-        background: linear-gradient(135deg, var(--gold), #d7b779);
-        color: #120f0b;
-        box-shadow: 0 14px 30px rgba(201, 161, 91, 0.22);
+        background: linear-gradient(135deg, var(--gold), var(--gold-strong));
+        color: #120f0a;
+        box-shadow: 0 16px 36px rgba(208, 167, 107, 0.25);
       }
-      .btn-primary:hover { filter: brightness(1.06); transform: translateY(-1px); }
+      .btn-primary:hover { transform: translateY(-1px); filter: brightness(1.05); }
       .btn-secondary {
         background: transparent;
         color: var(--text);
         border-color: var(--line);
       }
-      .btn-secondary:hover { background: rgba(201, 161, 91, 0.07); }
+      .btn-secondary:hover { background: rgba(208, 167, 107, 0.07); }
       .topbar {
-        background: rgba(10, 10, 10, 0.8);
-        backdrop-filter: blur(18px);
-        position: sticky;
-        top: 0;
-        z-index: 30;
+        position: sticky; top: 0; z-index: 30;
+        background: rgba(8, 8, 8, 0.8); backdrop-filter: blur(18px);
         border-bottom: 1px solid var(--line);
       }
-      .navbar { display: flex; align-items: center; justify-content: space-between; min-height: 84px; }
+      .navbar {
+        display: flex; align-items: center; justify-content: space-between; min-height: 84px;
+      }
       .brand {
         display: flex; align-items: center; gap: 12px;
-        font-weight: 700; font-size: 1.1rem; letter-spacing: 0.08em; text-transform: uppercase;
+        font-size: 1.05rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700;
       }
       .brand-mark {
         width: 34px; height: 34px; border-radius: 50%;
-        background: linear-gradient(135deg, #f1d199, var(--gold));
+        background: linear-gradient(135deg, #f2d7a3, var(--gold));
         position: relative; display: grid; place-items: center;
-        box-shadow: 0 0 22px rgba(201, 161, 91, 0.4);
+        box-shadow: 0 0 20px rgba(208, 167, 107, 0.30);
       }
       .brand-mark::before {
         content: ""; width: 14px; height: 14px; border-radius: 50%;
         border: 2px solid rgba(18,15,11,0.8); display: block;
       }
       .nav-links { display: flex; align-items: center; gap: 28px; }
-      .nav-links a {
-        font-size: 0.9rem; color: var(--muted); transition: color 0.2s ease;
-      }
+      .nav-links a { font-size: 0.9rem; color: var(--muted); }
       .nav-links a:hover { color: var(--text); }
       .nav-actions { display: flex; align-items: center; gap: 12px; }
       .menu-toggle {
         display: none; width: 46px; height: 46px; border-radius: 50%;
-        border: 1px solid var(--line); background: transparent; cursor: pointer; color: var(--text);
+        border: 1px solid var(--line); background: transparent; color: var(--text); cursor: pointer;
       }
-      .hero { position: relative; overflow: hidden; padding: 64px 0 48px; }
+
+      .hero {
+        position: relative; padding: 48px 0 36px; overflow: hidden;
+      }
+      .hero::before {
+        content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.2), rgba(208,167,107,0.02), rgba(0,0,0,0.2)); pointer-events: none;
+      }
       .hero-grid {
-        display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 48px;
+        display: grid; grid-template-columns: 1.05fr 0.95fr; align-items: center; gap: 42px;
       }
       .hero-copy h1 {
-        font-size: clamp(3.8rem, 6vw, 7rem); margin: 18px 0 20px; max-width: 620px;
+        font-size: clamp(3.6rem, 6vw, 7rem); margin: 18px 0 22px; max-width: 620px;
       }
-      .hero-copy p { max-width: 580px; font-size: 1.08rem; }
+      .hero-copy p {
+        color: var(--muted); font-size: 1.08rem; max-width: 580px;
+      }
       .hero-actions {
-        display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 32px;
+        display: flex; flex-wrap: wrap; gap: 16px; margin-top: 30px;
       }
       .hero-meta {
-        display: flex; align-items: center; gap: 30px; margin-top: 32px; flex-wrap: wrap;
+        display: flex; flex-wrap: wrap; gap: 28px; margin-top: 34px;
       }
-      .meta-box { min-width: 110px; }
+      .meta-box { min-width: 120px; }
       .meta-box strong {
-        display: block; font-size: 1.7rem; font-family: "Cormorant Garamond", serif; color: var(--text);
+        display: block; font-family: "Cormorant Garamond", serif; font-size: 2rem; color: var(--text);
       }
       .meta-box span { color: var(--muted); font-size: 0.82rem; }
+
       .hero-visual { position: relative; }
-      .image-stack { position: relative; display: grid; place-items: center; min-height: 700px; }
+      .image-stack { position: relative; min-height: 660px; }
       .card-image {
-        position: absolute; border-radius: 32px; overflow: hidden; background: #ddd; border: 1px solid rgba(201,161,91,0.18);
-        box-shadow: var(--shadow);
+        position: absolute; overflow: hidden; border-radius: 32px; border: 1px solid var(--line);
+        box-shadow: var(--shadow); background: #111;
       }
-      .main-image { width: min(100%, 520px); height: 680px; right: 30px; top: 0; z-index: 2; }
-      .accent-image { width: 280px; height: 310px; left: 0; bottom: 26px; z-index: 3; }
+      .main-image { width: min(100%, 520px); height: 680px; right: 34px; top: 0; z-index: 2; }
+      .accent-image { width: 280px; height: 320px; left: 0; bottom: 15px; z-index: 3; }
       .floating-badge {
-        position: absolute; right: 0; top: 120px; z-index: 4; background: rgba(17,17,17,0.95);
-        color: var(--text); padding: 18px 20px; border-radius: 20px; border: 1px solid var(--line); box-shadow: var(--shadow);
+        position: absolute; right: 0; top: 108px; z-index: 4;
+        border: 1px solid var(--line); border-radius: 20px; padding: 18px 20px;
+        background: rgba(14, 14, 14, 0.94); box-shadow: var(--shadow);
       }
-      .floating-badge .small { color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; }
+      .floating-badge .small {
+        display: block; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted);
+      }
       .floating-badge strong {
-        display: block; font-size: 2.2rem; font-family: "Cormorant Garamond", serif; margin-top: 6px; color: var(--gold);
+        display: block; color: var(--gold); margin-top: 6px; font-family: "Cormorant Garamond", serif; font-size: 2.2rem;
       }
+
       .featured-strip {
-        margin-top: 36px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,0.02);
+        margin-top: 30px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+        background: rgba(255,255,255,0.02);
       }
       .strip-inner {
         display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; padding: 24px 0;
@@ -163,114 +171,164 @@
       }
       .strip-icon {
         width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center;
-        background: rgba(201,161,91,0.12); color: var(--gold); font-size: 1.2rem; border: 1px solid var(--line);
+        background: rgba(208, 167, 107, 0.12); color: var(--gold); border: 1px solid var(--line);
       }
-      .categories-grid {
-        display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 48px;
+
+      .promo-row {
+        display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 22px; margin-top: 26px;
       }
-      .category-card {
-        background: linear-gradient(180deg, rgba(18,18,18,0.96), rgba(10,10,10,0.96));
-        border: 1px solid var(--line); border-radius: 28px; overflow: hidden; box-shadow: var(--shadow);
+      .promo-box {
+        padding: 22px 24px; border-radius: 24px; background: linear-gradient(180deg, rgba(18,18,18,0.96), rgba(10,10,10,0.96));
+        border: 1px solid var(--line); box-shadow: var(--shadow);
       }
-      .category-card img { height: 370px; object-fit: cover; }
-      .category-card .card-body { padding: 26px 24px 28px; }
-      .category-card h3 { font-size: clamp(2.1rem, 2vw, 3rem); margin: 10px 0 8px; }
-      .category-card a { display: inline-block; margin-top: 16px; font-weight: 600; color: var(--text); }
-      .section-header { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 40px; }
+      .promo-box strong {
+        display: block; font-size: 1.4rem; margin-top: 8px; color: var(--text);
+      }
+      .promo-box .small {
+        color: var(--gold);
+        letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.72rem; font-weight: 700;
+      }
+
+      .section-header {
+        display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 40px;
+      }
       .section-header h2 { font-size: clamp(3rem, 4vw, 5rem); }
       .section-header p { max-width: 520px; }
-      .collection-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
-      .product-card {
-        background: linear-gradient(180deg, rgba(18,18,18,0.96), rgba(11,11,11,0.96));
-        border: 1px solid var(--line); border-radius: 24px; overflow: hidden; box-shadow: var(--shadow);
+      .collections-grid,
+      .feature-grid,
+      .review-grid,
+      .shop-grid {
+        display: grid; gap: 24px;
       }
-      .product-image { position: relative; height: 360px; overflow: hidden; }
+      .collections-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .feature-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .review-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .shop-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+      .collection-card,
+      .feature-box,
+      .product-card,
+      .review-card {
+        background: linear-gradient(180deg, rgba(18,18,18,0.96), rgba(12,12,12,0.96));
+        border: 1px solid var(--line); border-radius: 28px; overflow: hidden; box-shadow: var(--shadow);
+      }
+      .collection-card img { height: 380px; object-fit: cover; }
+      .card-body { padding: 24px 22px 28px; }
+      .card-body h3 { font-size: clamp(2.1rem, 2vw, 3rem); margin: 10px 0 8px; }
+      .card-body a { display: inline-block; margin-top: 16px; font-weight: 600; color: var(--text); }
+
+      .product-image { position: relative; height: 350px; overflow: hidden; }
       .product-image img { width: 100%; height: 100%; object-fit: cover; }
       .tag {
-        position: absolute; left: 16px; top: 16px; background: rgba(12,12,12,0.82); color: var(--gold); border: 1px solid var(--line);
-        border-radius: 999px; padding: 8px 12px; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700;
+        position: absolute; left: 16px; top: 16px; padding: 8px 12px; border-radius: 999px;
+        background: rgba(10,10,10,0.8); border: 1px solid var(--line); color: var(--gold);
+        font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700;
       }
       .product-body { padding: 20px 18px 24px; }
-      .product-top { display: flex; justify-content: space-between; align-items: start; gap: 12px; }
+      .product-top { display: flex; align-items: start; justify-content: space-between; gap: 12px; }
       .product-body h3 { font-size: 2.1rem; }
-      .product-price { font-weight: 700; color: var(--gold); white-space: nowrap; }
+      .price { color: var(--gold); font-weight: 700; white-space: nowrap; }
       .product-body p { margin-top: 10px; font-size: 0.92rem; }
-      .product-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; }
+      .product-footer {
+        display: flex; align-items: center; justify-content: space-between; margin-top: 18px;
+      }
       .stars { color: var(--gold); letter-spacing: 0.12em; }
       .cart-btn {
-        width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: rgba(201,161,91,0.08); color: var(--gold);
-        display: grid; place-items: center; font-size: 1.2rem; cursor: pointer;
+        width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line); background: rgba(208,167,107,0.08);
+        color: var(--gold); font-size: 1.2rem; display: grid; place-items: center; cursor: pointer;
       }
-      .story { background: linear-gradient(180deg, rgba(18,18,18,0.55), rgba(7,7,7,0.2)); }
-      .story-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 36px; align-items: center; }
+
+      .story { background: linear-gradient(180deg, rgba(18,18,18,0.56), rgba(7,7,7,0.2)); }
+      .story-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; align-items: center; gap: 36px; }
       .story-visual { position: relative; min-height: 620px; }
       .story-image-main {
-        position: absolute; inset: 0 40px 0 0; border-radius: 32px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--line);
+        position: absolute; inset: 0 38px 0 0; border-radius: 34px; overflow: hidden; border: 1px solid var(--line);
+        box-shadow: var(--shadow);
       }
       .story-image-extra {
-        position: absolute; right: 0; bottom: 26px; width: 220px; height: 260px; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow);
-        border: 10px solid rgba(7,7,7,0.7);
+        position: absolute; right: 0; bottom: 26px; width: 220px; height: 258px; border-radius: 26px; overflow: hidden;
+        border: 10px solid rgba(7,7,7,0.7); box-shadow: var(--shadow);
       }
       .story-copy h2 { font-size: clamp(3rem, 4vw, 5rem); margin: 18px 0 20px; }
-      .story-list { margin-top: 26px; display: grid; gap: 18px; }
-      .story-item { display: flex; gap: 14px; align-items: start; }
+      .story-list { margin-top: 24px; display: grid; gap: 18px; }
+      .story-item { display: flex; align-items: start; gap: 14px; }
       .story-icon {
-        width: 42px; height: 42px; border-radius: 50%; background: rgba(201,161,91,0.12); color: var(--gold);
-        display: grid; place-items: center; flex-shrink: 0; border: 1px solid var(--line);
+        width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center;
+        color: var(--gold); background: rgba(208,167,107,0.1); border: 1px solid var(--line);
       }
       .story-item h4 { font-size: 2rem; margin-bottom: 4px; }
-      .testimonial-wrap { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 48px; }
-      .testimonial {
-        background: linear-gradient(180deg, rgba(18,18,18,0.95), rgba(11,11,11,0.95));
-        border: 1px solid var(--line); border-radius: 24px; padding: 28px 22px; box-shadow: var(--shadow);
+
+      .feature-box { padding: 26px 22px; }
+      .feature-box h3 { font-size: 2.3rem; margin: 12px 0 10px; }
+      .feature-box .feature-icon {
+        width: 50px; height: 50px; border-radius: 50%; display: grid; place-items: center; color: var(--gold);
+        background: rgba(208,167,107,0.12); border: 1px solid var(--line);
       }
-      .quote-mark { font-size: 3rem; font-family: "Cormorant Garamond", serif; color: var(--gold); line-height: 1; }
-      .testimonial p { margin-top: 10px; }
+
+      .review-card {
+        padding: 24px 22px;
+      }
+      .quote-mark { font-size: 3rem; color: var(--gold); line-height: 1; font-family: "Cormorant Garamond", serif; }
+      .review-card p { margin-top: 10px; }
       .person { display: flex; align-items: center; gap: 12px; margin-top: 20px; }
-      .person img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; }
+      .person img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; }
       .person strong { display: block; color: var(--text); }
-      .cta { background: linear-gradient(100deg, rgba(201,161,91,0.08), rgba(18,18,18,0.5)); }
+
+      .cta {
+        background: linear-gradient(110deg, rgba(208, 167, 107, 0.07), rgba(17,17,17,0.7));
+      }
       .cta-box {
-        display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; align-items: center;
-        background: linear-gradient(180deg, rgba(18,18,18,0.95), rgba(11,11,11,0.95));
-        border: 1px solid var(--line); border-radius: 30px; padding: 40px 34px; box-shadow: var(--shadow);
+        display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 26px; align-items: center;
+        padding: 36px 30px; border-radius: 30px; background: linear-gradient(180deg, rgba(18,18,18,0.96), rgba(10,10,10,0.96));
+        border: 1px solid var(--line); box-shadow: var(--shadow);
       }
-      .cta-box h2 { font-size: clamp(2.8rem, 4vw, 4.5rem); margin: 14px 0 10px; }
-      .newsletter { display: flex; align-items: center; gap: 12px; width: 100%; justify-content: flex-end; }
+      .cta-box h2 { font-size: clamp(2.9rem, 4vw, 4.5rem); margin: 12px 0 10px; }
+      .newsletter { display: flex; align-items: center; gap: 12px; }
       .newsletter input {
-        flex: 1; min-height: 58px; border-radius: 999px; border: 1px solid var(--line); background: rgba(0,0,0,0.35); color: var(--text);
-        padding: 0 18px; font-size: 1rem; outline: none;
+        flex: 1; min-height: 58px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--line);
+        background: rgba(255,255,255,0.02); color: var(--text); outline: none;
       }
-      .newsletter input::placeholder { color: rgba(248,244,238,0.5); }
-      .footer { padding: 34px 0 48px; border-top: 1px solid var(--line); background: rgba(10,10,10,0.9); }
-      .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
-      .small-links { display: flex; gap: 18px; flex-wrap: wrap; color: var(--muted); font-size: 0.9rem; }
+      .newsletter input::placeholder { color: rgba(247,241,234,0.5); }
+
+      .footer { padding: 34px 0 52px; border-top: 1px solid var(--line); background: rgba(10,10,10,0.94); }
+      .footer-inner {
+        display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap;
+      }
+      .small-links {
+        display: flex; flex-wrap: wrap; gap: 18px; color: var(--muted); font-size: 0.9rem;
+      }
+      .socials {
+        display: flex; align-items: center; gap: 12px; color: var(--gold);
+      }
+      .social-badge {
+        width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%;
+        border: 1px solid var(--line); background: rgba(208,167,107,0.08);
+      }
 
       @media (max-width: 980px) {
-        .hero-grid, .story-grid, .cta-box, .categories-grid, .testimonial-wrap, .collection-grid { grid-template-columns: 1fr 1fr; }
-        .hero-grid { grid-template-columns: 1fr; }
+        .hero-grid, .story-grid, .cta-box { grid-template-columns: 1fr; }
+        .collections-grid, .feature-grid, .review-grid { grid-template-columns: 1fr 1fr; }
+        .shop-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .promo-row { grid-template-columns: 1fr; }
         .image-stack { min-height: 560px; }
-        .main-image { right: 10px; width: min(100%, 430px); height: 520px; }
-        .accent-image { width: 220px; height: 260px; }
+        .main-image { width: min(100%, 430px); height: 520px; right: 16px; }
+        .accent-image { width: 225px; height: 260px; }
         .nav-links {
-          position: absolute; top: 84px; left: 16px; right: 16px; background: rgba(17, 17, 17, 0.98);
-          border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; display: none; flex-direction: column; align-items: flex-start; box-shadow: var(--shadow);
+          position: absolute; top: 84px; left: 16px; right: 16px; display: none; flex-direction: column; align-items: flex-start;
+          background: rgba(11,11,11,0.98); border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; box-shadow: var(--shadow);
         }
         .nav-links.open { display: flex; }
         .menu-toggle { display: inline-grid; place-items: center; }
-        .collection-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       }
 
       @media (max-width: 640px) {
         .section { padding: 80px 0; }
-        .hero-copy h1 { font-size: 3.4rem; }
-        .strip-inner, .categories-grid, .collection-grid, .testimonial-wrap, .cta-box { grid-template-columns: 1fr; }
+        .hero-copy h1 { font-size: 3.3rem; }
+        .collections-grid, .feature-grid, .review-grid, .shop-grid, .cta-box, .strip-inner { grid-template-columns: 1fr; }
         .section-header { display: block; }
         .section-header h2 { margin-bottom: 12px; }
-        .hero-meta { gap: 22px; }
-        .newsletter { flex-direction: column; align-items: stretch; justify-content: flex-start; }
+        .newsletter { flex-direction: column; align-items: stretch; }
         .nav-actions .btn { display: none; }
-        .brand { font-size: 0.95rem; letter-spacing: 0.06em; }
         .story-visual { min-height: 430px; }
         .story-image-main { inset: 0 0 0 0; }
         .story-image-extra { width: 160px; height: 190px; }
@@ -288,7 +346,7 @@
         <nav class="nav-links" id="navLinks">
           <a href="#new">New In</a>
           <a href="#collections">Collections</a>
-          <a href="#bestsellers">Bestsellers</a>
+          <a href="#shop">Shop</a>
           <a href="#story">Our Story</a>
           <a href="#reviews">Reviews</a>
         </nav>
@@ -301,18 +359,17 @@
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero" id="new">
         <div class="container hero-grid">
           <div class="hero-copy">
             <span class="eyebrow">Luxury. Street. Signature.</span>
             <h1>Jewelry that hits different.</h1>
             <p>
-              Gen Z to millennial essentials designed for bold nights, polished days,
-              and everything in between. Curated pieces that feel premium, personal, and unforgettable.
+              Premium essentials and statement pieces built for the bold, stylish, and unapologetically confident — from brunch to after-dark.
             </p>
 
             <div class="hero-actions">
-              <a href="#collections" class="btn btn-primary">Shop the drop</a>
+              <a href="#shop" class="btn btn-primary">Shop the drop</a>
               <a href="#story" class="btn btn-secondary">Why us</a>
             </div>
 
@@ -335,13 +392,11 @@
           <div class="hero-visual">
             <div class="image-stack">
               <div class="card-image main-image">
-                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Elegant fashion portrait" />
+                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Lockedin Exclusives luxury portrait" />
               </div>
-
               <div class="card-image accent-image">
-                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Fashion lookbook" />
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Luxury lookbook style" />
               </div>
-
               <div class="floating-badge">
                 <span class="small">Fresh drop</span>
                 <strong>Spring '25</strong>
@@ -372,6 +427,25 @@
         </div>
       </section>
 
+      <section class="section">
+        <div class="container">
+          <div class="promo-row">
+            <div class="promo-box">
+              <span class="small">Trend alert</span>
+              <strong>Gold stack layers</strong>
+            </div>
+            <div class="promo-box">
+              <span class="small">Limited edit</span>
+              <strong>Nightwear luxe</strong>
+            </div>
+            <div class="promo-box">
+              <span class="small">Members-only</span>
+              <strong>VIP early access</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section" id="collections">
         <div class="container">
           <div class="section-header">
@@ -380,37 +454,37 @@
               <h2>Luxury pieces with attitude.</h2>
             </div>
             <p>
-              Sleek silhouettes, statement jewels, and everyday wear designed to elevate your look without sacrificing comfort.
+              Sleek silhouettes, statement jewels, and elevated essentials designed to carry you from day to night with confidence.
             </p>
           </div>
 
-          <div class="categories-grid">
-            <article class="category-card">
+          <div class="collections-grid">
+            <article class="collection-card">
               <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80" alt="Jewelry collection" />
               <div class="card-body">
                 <span class="eyebrow">Jewelry</span>
                 <h3>Gold in motion</h3>
-                <p>Layered chains, sculptural rings, and eye-catching finishes for every fit.</p>
-                <a href="#bestsellers">Explore →</a>
+                <p>Layered chains, sculptural rings, and luxury finishes for a bold signature look.</p>
+                <a href="#shop">Explore →</a>
               </div>
             </article>
 
-            <article class="category-card">
+            <article class="collection-card">
               <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Clothing collection" />
               <div class="card-body">
                 <span class="eyebrow">Apparel</span>
                 <h3>Soft structure</h3>
-                <p>Minimalist staples and elevated basics made to stand out with subtle drama.</p>
-                <a href="#bestsellers">Explore →</a>
+                <p>Fluid silhouettes and elevated basics made to move effortlessly through your day.</p>
+                <a href="#shop">Explore →</a>
               </div>
             </article>
 
-            <article class="category-card">
-              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" alt="Accessories and gifting" />
+            <article class="collection-card">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" alt="Gift-ready collection" />
               <div class="card-body">
-                <span class="eyebrow">Gifting</span>
-                <h3>Gift-ready</h3>
-                <p>Luxury bundles and premium essentials made for celebrations and self-love.</p>
+                <span class="eyebrow">Gift-ready</span>
+                <h3>Luxury bundles</h3>
+                <p>Premium essentials for self-love, celebrations, and unforgettable gifting moments.</p>
                 <a href="#newsletter">Explore →</a>
               </div>
             </article>
@@ -418,7 +492,7 @@
         </div>
       </section>
 
-      <section class="section" id="bestsellers">
+      <section class="section" id="shop">
         <div class="container">
           <div class="section-header">
             <div>
@@ -428,16 +502,16 @@
             <a href="#newsletter" class="btn btn-secondary">View all</a>
           </div>
 
-          <div class="collection-grid">
+          <div class="shop-grid">
             <article class="product-card">
               <div class="product-image">
-                <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80" alt="Gold jewelry set" />
+                <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80" alt="Solstice Set" />
                 <span class="tag">New</span>
               </div>
               <div class="product-body">
                 <div class="product-top">
                   <h3>Solstice Set</h3>
-                  <div class="product-price">$148</div>
+                  <div class="price">$148</div>
                 </div>
                 <p>Stackable gold necklace and ring pairing</p>
                 <div class="product-footer">
@@ -449,13 +523,13 @@
 
             <article class="product-card">
               <div class="product-image">
-                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Elegant outfit" />
+                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Ember Dress" />
                 <span class="tag">Popular</span>
               </div>
               <div class="product-body">
                 <div class="product-top">
                   <h3>Ember Dress</h3>
-                  <div class="product-price">$196</div>
+                  <div class="price">$196</div>
                 </div>
                 <p>Soft knit silhouette with refined structure</p>
                 <div class="product-footer">
@@ -467,13 +541,13 @@
 
             <article class="product-card">
               <div class="product-image">
-                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" alt="Style with layered gold" />
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" alt="Velvet Link" />
                 <span class="tag">Limited</span>
               </div>
               <div class="product-body">
                 <div class="product-top">
                   <h3>Velvet Link</h3>
-                  <div class="product-price">$92</div>
+                  <div class="price">$92</div>
                 </div>
                 <p>Layered chain bracelet with polished finish</p>
                 <div class="product-footer">
@@ -485,13 +559,13 @@
 
             <article class="product-card">
               <div class="product-image">
-                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" alt="Luxury fabric fashion" />
+                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" alt="Luna Blazer" />
                 <span class="tag">Editor’s pick</span>
               </div>
               <div class="product-body">
                 <div class="product-top">
                   <h3>Luna Blazer</h3>
-                  <div class="product-price">$228</div>
+                  <div class="price">$228</div>
                 </div>
                 <p>Tailored blazer with fluid movement and elegance</p>
                 <div class="product-footer">
@@ -551,6 +625,37 @@
         </div>
       </section>
 
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow">Why people shop here</span>
+              <h2>Built for the modern icon.</h2>
+            </div>
+          </div>
+
+          <div class="feature-grid">
+            <div class="feature-box">
+              <div class="feature-icon">✦</div>
+              <h3>Premium finish</h3>
+              <p>Clean silhouettes and standout details that feel elevated from the first glance.</p>
+            </div>
+
+            <div class="feature-box">
+              <div class="feature-icon">◎</div>
+              <h3>Streetwear energy</h3>
+              <p>Fashion-forward pieces with a luxury edge for your everyday wardrobe rotation.</p>
+            </div>
+
+            <div class="feature-box">
+              <div class="feature-icon">✓</div>
+              <h3>Confidence built in</h3>
+              <p>Luxury that can be worn anywhere and styled for every mood, moment, and occasion.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section" id="reviews">
         <div class="container">
           <div class="section-header">
@@ -560,14 +665,12 @@
             </div>
           </div>
 
-          <div class="testimonial-wrap">
-            <article class="testimonial">
+          <div class="review-grid">
+            <article class="review-card">
               <div class="quote-mark">“</div>
-              <p>
-                The quality is stunning and the jewelry looks even better in person. It feels premium without trying too hard.
-              </p>
+              <p>The quality is stunning and the jewelry looks even better in person. It feels premium without trying too hard.</p>
               <div class="person">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" alt="Reviewer portrait" />
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" alt="Emma R." />
                 <div>
                   <strong>Emma R.</strong>
                   <span>New York</span>
@@ -575,13 +678,11 @@
               </div>
             </article>
 
-            <article class="testimonial">
+            <article class="review-card">
               <div class="quote-mark">“</div>
-              <p>
-                I wore the blazer and necklace to a dinner event and got compliments all night. The whole aesthetic feels elevated.
-              </p>
+              <p>I wore the blazer and necklace to a dinner event and got compliments all night. The whole aesthetic feels elevated.</p>
               <div class="person">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="Reviewer portrait" />
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="Daniel T." />
                 <div>
                   <strong>Daniel T.</strong>
                   <span>Chicago</span>
@@ -589,13 +690,11 @@
               </div>
             </article>
 
-            <article class="testimonial">
+            <article class="review-card">
               <div class="quote-mark">“</div>
-              <p>
-                Every detail feels intentional. It’s rare to find pieces that look refined and still feel wearable every day.
-              </p>
+              <p>Every detail feels intentional. It’s rare to find pieces that look refined and still feel wearable every day.</p>
               <div class="person">
-                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=300&q=80" alt="Reviewer portrait" />
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=300&q=80" alt="Sophia L." />
                 <div>
                   <strong>Sophia L.</strong>
                   <span>Los Angeles</span>
@@ -637,22 +736,28 @@
           <a href="#newsletter">Newsletter</a>
         </div>
 
+        <div class="socials">
+          <span class="social-badge">IG</span>
+          <span class="social-badge">YT</span>
+          <span class="social-badge">WA</span>
+        </div>
+
         <p>© 2025 Lockedin Exclusives</p>
       </div>
     </footer>
 
     <script>
-      const menuToggle = document.getElementById("menuToggle");
-      const navLinks = document.getElementById("navLinks");
-      menuToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
 
-      document.querySelector(".newsletter").addEventListener("submit", function (e) {
-        e.preventDefault();
-        const button = this.querySelector("button");
-        const input = this.querySelector("input");
-        button.textContent = "Joined";
+      document.querySelector('.newsletter').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const button = this.querySelector('button');
+        const input = this.querySelector('input');
+        button.textContent = 'Joined';
         button.disabled = true;
-        input.value = "";
+        input.value = '';
       });
     </script>
   </body>
